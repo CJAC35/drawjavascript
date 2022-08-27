@@ -30,6 +30,10 @@ canvas.addEventListener('mousemove', (e)=>{
     moving_mouse = true
 })
 
+canvas.addEventListener("ontouchstart", this.touchstart.bind(this), false);
+canvas.addEventListener("ontouchmove", this.touchmove.bind(this), false);
+canvas.addEventListener("ontouchend", this.touchend.bind(this), false);
+
 function change_color(c){
     color = c
     context.strokeStyle = color
